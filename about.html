@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Waveink</title>
+  <!-- bootstrap cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Header will be loaded here by load-components.js -->
+
+  <main>
+    <!-- WHO WE ARE -->
+    <section class="about-intro bg-light-orange">
+      <div class="container">
+        <h2 class="page-title mb-4 pb-md-2">Who We Are</h2>
+        <div class="about-cards">
+          <div class="about-card">
+            <i class="fas fa-bolt"></i>
+            <h3>Our Beginning</h3>
+            <p>Founded in December 2024, Waveink was built with a 
+              vision to empower businesses with high-quality content. </p>
+          </div>
+          <div class="about-card">
+            <i class="fas fa-users"></i>
+            <h3>Who We Serve</h3>
+            <p>From startups and indie hackers to large businesses and solopreneurs to CXOs, 
+              we offer tailored solutions for every content need. Whether it’s a blog, a case study, or SaaS documentation—we’ve 
+              got it covered.</p>
+          </div>
+          <div class="about-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Our Approach</h3>
+            <p>Get things done! Listen. Read. Research. Learn. Right. Impactful Delivery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE VALUES with slider -->
+    <section class="about-values bg-light-cream">
+      <h2 class="page-title mb-4 pb-md-2">Our Core Values</h2>
+      <div class="core-carousel">
+        <button class="carousel-arrow left" onclick="prevValues()">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="value-cards" id="core-values-container">
+          <!-- JS will inject value cards here -->
+        </div>
+
+        <button class="carousel-arrow right" onclick="nextValues()">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- MEET THE TEAM -->
+    <section class="about-team bg-light-beige">
+      <h2 class="page-title mb-4 pb-md-2">Meet the Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="team1.jpg" alt="Team Member 1">
+          <h3>Suraj Shukla</h3>
+          <p> Writer</p>
+          <a href="#" class="linkedin-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+        <div class="team-member">
+          <img src="team2.jpg" alt="Team Member 2">
+          <h3>Maya Agnihotri</h3>
+          <p>Writer par excellence</p>
+          <a href="#" class="linkedin-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+        <div class="team-member">
+          <img src="team3.jpg" alt="Team Member 3">
+          <h3>You?</h3>
+          <p>Be the person the world needs. :)</p>
+          <a href="#" class="linkedin-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer will be loaded here by load-components.js -->
+
+  <script>
+    const allValues = [
+      {
+        icon: "fas fa-lightbulb",
+        title: "Creativity",
+        text: "We bring ideas that spark joy, connection, and action."
+      },
+      {
+        icon: "fas fa-hands-helping",
+        title: "Collaboration",
+        text: "We grow stronger together — with our team and our clients."
+      },
+      {
+        icon: "fas fa-bullseye",
+        title: "Clarity",
+        text: "No fluff. Just powerful, clear communication that works."
+      },
+      {
+        icon: "fas fa-brain",
+        title: "Strategy",
+        text: "We blend insight with imagination to tell smart stories."
+      },
+      {
+        icon: "fas fa-mug-hot",
+        title: "Culture",
+        text: "We vibe with memes, chai breaks, and shared laughter."
+      }
+    ];
+
+    let currentStart = 0;
+    const maxVisible = 3;
+
+    function renderValues() {
+      const container = document.getElementById('core-values-container');
+      container.innerHTML = '';
+
+      const slice = allValues.slice(currentStart, currentStart + maxVisible);
+      slice.forEach(val => {
+        const card = document.createElement('div');
+        card.className = 'value-card';
+        card.innerHTML = `
+          <i class="${val.icon}"></i>
+          <h3>${val.title}</h3>
+          <p>${val.text}</p>
+        `;
+        container.appendChild(card);
+      });
+
+      // Disable arrows if needed
+      document.querySelector('.carousel-arrow.left').disabled = currentStart === 0;
+      document.querySelector('.carousel-arrow.right').disabled = currentStart + maxVisible >= allValues.length;
+    }
+
+    function nextValues() {
+      if (currentStart + maxVisible < allValues.length) {
+        currentStart += 1;
+        renderValues();
+      }
+    }
+
+    function prevValues() {
+      if (currentStart > 0) {
+        currentStart -= 1;
+        renderValues();
+      }
+    }
+
+    renderValues();
+  </script>
+  <script src="components/load-components.js"></script>
+  <!-- bootstrap cdn script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
