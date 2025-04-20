@@ -138,7 +138,7 @@ section {
 .footer-icons img {
   height: 24px;
   margin: 0 0.5rem;
-  filter: invert(1);
+/*   filter: invert(1); */
 }
 
 /* Background color flow */
