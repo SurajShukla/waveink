@@ -63,8 +63,6 @@
     </div>
   </section>
 
-  <div id="medium-posts"></div>
-
 <script>
   fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@waveinksolutions")
     .then(response => response.json())
@@ -87,8 +85,10 @@
       });
       output += "</div>";
       document.getElementById("medium-posts").innerHTML = output;
-    });
+    })
+    .catch(error => console.error('Error fetching Medium posts:', error));
 </script>
+
 
 
     <!-- Footer will be loaded here by load-components.js -->
