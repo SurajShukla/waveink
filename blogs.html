@@ -63,6 +63,34 @@
     </div>
   </section>
 
+  <div id="medium-posts"></div>
+
+<script>
+  fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@waveinksolutions")
+    .then(response => response.json())
+    .then(data => {
+      const posts = data.items;
+      let output = "<div class='row'>";
+      posts.forEach(post => {
+        output += `
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="${post.thumbnail}" class="card-img-top" alt="${post.title}">
+              <div class="card-body">
+                <h5 class="card-title">${post.title}</h5>
+                <p class="card-text">${post.description.substring(0, 100)}...</p>
+                <a href="${post.link}" target="_blank" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+      output += "</div>";
+      document.getElementById("medium-posts").innerHTML = output;
+    });
+</script>
+
+
     <!-- Footer will be loaded here by load-components.js -->
     
     <script src="components/load-components.js"></script>
