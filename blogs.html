@@ -68,5 +68,39 @@
     <script src="components/load-components.js"></script>
     <!-- bootstrap cdn script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <div class="container mt-5">
+  <h2 class="mb-4">Latest on Medium</h2>
+  <div id="medium-posts" class="row gy-4"></div>
+</div>
+
+<script>
+  fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@waveinksolutions")
+    .then(response => response.json())
+    .then(data => {
+      const posts = data.items; // No filter now
+      let output = "";
+      posts.forEach(post => {
+        output += `
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img src="${post.thumbnail}" class="card-img-top" alt="${post.title}">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">${post.title}</h5>
+                <p class="card-text">${post.description.substring(0, 100)}...</p>
+                <a href="${post.link}" target="_blank" class="btn btn-outline-dark mt-auto">Read on Medium</a>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+      document.getElementById("medium-posts").innerHTML = output;
+    })
+    .catch(error => {
+      console.error("Error loading Medium posts:", error);
+      document.getElementById("medium-posts").innerHTML = "<p>Could not load Medium blogs. Try again later.</p>";
+    });
+</script>
+
   </body>
 </html>
