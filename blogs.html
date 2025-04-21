@@ -62,39 +62,39 @@
     </div>
     </div>
   </section>
- <div class="container mt-5">
-    <h1 class="mb-4">Latest Blogs from Medium</h1>
-    <div id="medium-posts" class="row"></div>
-  </div>
 
-  <script>
-    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@waveinksolutions")
-      .then(response => response.json())
-      .then(data => {
-        const posts = data.items.filter(item => item.categories.length > 0); // Exclude responses/comments
-        let output = "";
-        posts.forEach(post => {
-          output += `
-            <div class="col-md-4 mb-4">
-              <div class="card h-100">
-                <img src="${post.thumbnail}" class="card-img-top" alt="${post.title}">
-                <div class="card-body">
-                  <h5 class="card-title">${post.title}</h5>
-                  <p class="card-text">${post.description.substring(0, 100)}...</p>
-                  <a href="${post.link}" target="_blank" class="btn btn-primary">Read More</a>
-                </div>
+  <div class="container mt-5">
+  <h1 class="mb-4">Latest Blogs from Medium</h1>
+  <div id="medium-posts" class="row"></div>
+</div>
+
+<script>
+  fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@waveinksolutions")
+    .then(response => response.json())
+    .then(data => {
+      const posts = data.items.filter(item => item.categories.length > 0); // Skip responses/comments
+      let output = "";
+      posts.forEach(post => {
+        output += `
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="${post.thumbnail}" class="card-img-top" alt="${post.title}">
+              <div class="card-body">
+                <h5 class="card-title">${post.title}</h5>
+                <p class="card-text">${post.description.substring(0, 100)}...</p>
+                <a href="${post.link}" target="_blank" class="btn btn-primary">Read More</a>
               </div>
             </div>
-          `;
-        });
-        document.getElementById("medium-posts").innerHTML = output;
-      })
-      .catch(error => {
-        console.error('Error fetching Medium posts:', error);
-        document.getElementById("medium-posts").innerHTML = `<p>Failed to load blogs. Please try again later.</p>`;
+          </div>
+        `;
       });
-  </script>
-  <Section/>
+      document.getElementById("medium-posts").innerHTML = output;
+    })
+    .catch(error => {
+      console.error('Error fetching Medium posts:', error);
+      document.getElementById("medium-posts").innerHTML = `<p>Failed to load blogs. Please try again later.</p>`;
+    });
+</script>
 
 
     <!-- Footer will be loaded here by load-components.js -->
