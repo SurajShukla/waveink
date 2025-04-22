@@ -47,15 +47,12 @@
         const card = document.createElement("div");
         card.className = "blog-card";
 
-        // Fallback image if none
-        const image = post.thumbnail || 'images/placeholder.jpg';
 
         // Strip HTML from description
         const textOnly = post.description.replace(/<[^>]+>/g, '');
         const snippet = textOnly.split(" ").slice(0, 20).join(" ") + '...';
 
         card.innerHTML = `
-          <img src="${image}" alt="${post.title}">
           <div class="blog-content">
             <h3>${post.title}</h3>
             <p>${snippet}</p>
