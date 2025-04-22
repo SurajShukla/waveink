@@ -40,7 +40,7 @@
 
       posts.forEach(post => {
         const card = document.createElement("div");
-        card.className = "-card";
+        card.className = "blog-card";
 
         card.innerHTML = `
         <img src="${post.thumbnail || 'images/placeholder.jpg'}" alt="Blog Thumbnail">
@@ -59,6 +59,7 @@
       container.innerHTML = `<p class="text-danger">Unable to load blog posts right now. Please check back later.</p>`;
     });
 </script>
+
 
   </body>
 </html>
