@@ -28,13 +28,14 @@
 </section>
 
 
+
     <!-- Footer will be loaded here by load-components.js -->
     
     <script src="components/load-components.js"></script>
     <!-- bootstrap cdn script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script>
+ <script>
   const feedUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://waveink.substack.com/feed";
   const container = document.getElementById("substack-blog-feed");
 
@@ -71,8 +72,6 @@
       container.innerHTML = `<p class="text-danger">Oops! Couldn’t load blog posts right now. Please check back later.</p>`;
     });
 </script>
-
-
 
   </body>
 </html>
