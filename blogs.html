@@ -34,7 +34,7 @@
     <!-- bootstrap cdn script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
+  <script>
   const feedUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://waveink.substack.com/feed";
   const container = document.getElementById("substack-blog-feed");
 
@@ -47,12 +47,15 @@
         const card = document.createElement("div");
         card.className = "blog-card";
 
+        // Fallback image if none
+        const image = post.thumbnail || 'images/placeholder.jpg';
 
         // Strip HTML from description
         const textOnly = post.description.replace(/<[^>]+>/g, '');
         const snippet = textOnly.split(" ").slice(0, 20).join(" ") + '...';
 
         card.innerHTML = `
+          <img src="${image}" alt="${post.title}">
           <div class="blog-content">
             <h3>${post.title}</h3>
             <p>${snippet}</p>
@@ -68,6 +71,7 @@
       container.innerHTML = `<p class="text-danger">Oops! Couldn’t load blog posts right now. Please check back later.</p>`;
     });
 </script>
+
 
 
   </body>
