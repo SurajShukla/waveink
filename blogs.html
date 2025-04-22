@@ -16,62 +16,58 @@
   <!-- Header -->
   <div id="header-placeholder"></div>
 
-<section class="blogs-page">
-  <div class="container">
+  <section class="blogs-page">
+    <div class="container">
     <h2 class="page-title mb-1">Brainwaves & Wordstorms</h2>
     <p class="blogs-sub mb-4 pb-md-4 font-xs">Stuff we think, write, rant, and totally overthink about.</p>
+    
+    <div class="blogs-grid">
 
-    <div class="blogs-grid" id="substack-blog-feed">
-      <!-- Dynamic blog cards from Substack will be injected here -->
+      <div class="blog-card">
+        <img src="images/blog1.jpg" alt="Blog 1">
+        <div class="blog-content">
+          <h3>Why Your Pitch Deck Needs a Plot Twist</h3>
+          <p>Most decks are just bullet points in disguise. We show you how to tell a story.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="images/blog2.jpg" alt="Blog 2">
+        <div class="blog-content">
+          <h3>The Art of Sounding Smart (Without Losing the Plot)</h3>
+          <p>How to simplify complex stuff so your readers don’t rage-quit.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="images/blog3.jpg" alt="Blog 3">
+        <div class="blog-content">
+          <h3>Web Copy That Doesn’t Suck</h3>
+          <p>Goodbye filler words, hello conversion magic. Here’s our cheat sheet.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <img src="images/blog4.jpg" alt="Blog 4">
+        <div class="blog-content">
+          <h3>“Professional” Doesn’t Mean Boring</h3>
+          <p>Why brand voice matters, and how to keep yours fresh without trying too hard.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </div>
+      </div>
+
     </div>
-  </div>
-</section>
-
-
+    </div>
+  </section>
 
     <!-- Footer will be loaded here by load-components.js -->
     
     <script src="components/load-components.js"></script>
     <!-- bootstrap cdn script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-
- <script>
-  const feedUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://waveink.substack.com/feed";
-  const container = document.getElementById("substack-blog-feed");
-
-  fetch(feedUrl)
-    .then(res => res.json())
-    .then(data => {
-      const posts = data.items.filter(item => item.categories.length > 0).slice(0, 6); // Only real posts
-
-      posts.forEach(post => {
-        const card = document.createElement("div");
-        card.className = "blog-card";
-
-        // Fallback image if none
-        const image = post.thumbnail || 'images/placeholder.jpg';
-
-        // Strip HTML from description
-        const textOnly = post.description.replace(/<[^>]+>/g, '');
-        const snippet = textOnly.split(" ").slice(0, 20).join(" ") + '...';
-
-        card.innerHTML = `
-          <img src="${image}" alt="${post.title}">
-          <div class="blog-content">
-            <h3>${post.title}</h3>
-            <p>${snippet}</p>
-            <a href="${post.link}" target="_blank" class="read-more">Read more →</a>
-          </div>
-        `;
-
-        container.appendChild(card);
-      });
-    })
-    .catch(err => {
-      console.error("Substack feed error:", err);
-      container.innerHTML = `<p class="text-danger">Oops! Couldn’t load blog posts right now. Please check back later.</p>`;
-    });
-</script>
 
   </body>
 </html>
