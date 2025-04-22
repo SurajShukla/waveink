@@ -43,7 +43,6 @@
         card.className = "";
 
         card.innerHTML = `
-        <img src="${post.thumbnail || 'images/placeholder.jpg'}" alt="Blog Thumbnail">
           <div class="blog-content">
             <h3>${post.title}</h3>
             <p>${post.description.split(" ").slice(0, 20).join(" ")}...</p>
