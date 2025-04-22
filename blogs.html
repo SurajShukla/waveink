@@ -14,13 +14,19 @@
 <body>
 
   <!-- Header -->
-  <section class="blogs-page">
-    <div class="container">
+  <div id="header-placeholder"></div>
+
+<section class="blogs-page">
+  <div class="container">
     <h2 class="page-title mb-1">Brainwaves & Wordstorms</h2>
     <p class="blogs-sub mb-4 pb-md-4 font-xs">Stuff we think, write, rant, and totally overthink about.</p>
-  <div class="blogs-grid" id="substack-blog-feed">
-  <!-- Blog tiles will be injected here -->
-</div>
+
+    <div class="blogs-grid" id="substack-blog-feed">
+      <!-- Dynamic blog cards from Substack will be injected here -->
+    </div>
+  </div>
+</section>
+
 
     <!-- Footer will be loaded here by load-components.js -->
     
@@ -33,19 +39,26 @@
   const container = document.getElementById("substack-blog-feed");
 
   fetch(feedUrl)
-    .then(response => response.json())
+    .then(res => res.json())
     .then(data => {
-      const posts = data.items.slice(0, 6); // Limit to 6 posts
+      const posts = data.items.filter(item => item.categories.length > 0).slice(0, 6); // Only real posts
 
       posts.forEach(post => {
         const card = document.createElement("div");
         card.className = "blog-card";
 
+        // Fallback image if none
+        const image = post.thumbnail || 'images/placeholder.jpg';
+
+        // Strip HTML from description
+        const textOnly = post.description.replace(/<[^>]+>/g, '');
+        const snippet = textOnly.split(" ").slice(0, 20).join(" ") + '...';
+
         card.innerHTML = `
-          <img src="${post.thumbnail || 'images/placeholder.jpg'}" alt="Blog Thumbnail">
+          <img src="${image}" alt="${post.title}">
           <div class="blog-content">
             <h3>${post.title}</h3>
-            <p>${post.description.split(" ").slice(0, 20).join(" ")}...</p>
+            <p>${snippet}</p>
             <a href="${post.link}" target="_blank" class="read-more">Read more →</a>
           </div>
         `;
@@ -53,9 +66,9 @@
         container.appendChild(card);
       });
     })
-    .catch(error => {
-      console.error("Failed to fetch Substack feed:", error);
-      container.innerHTML = `<p class="text-danger">Unable to load blog posts right now. Please check back later.</p>`;
+    .catch(err => {
+      console.error("Substack feed error:", err);
+      container.innerHTML = `<p class="text-danger">Oops! Couldn’t load blog posts right now. Please check back later.</p>`;
     });
 </script>
 
