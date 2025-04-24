@@ -558,3 +558,15 @@ section {
   display: none;
 }
 
+.about-thinking .tile {
+  background-color: #ffffff; /* white base */
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.06);
+  transition: background 0.3s ease;
+}
+.about-thinking .tile:hover {
+  background-color: #ffeccc; /* soft yellow on hover */
+}
