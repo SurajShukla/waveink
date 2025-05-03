@@ -1,56 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us | WaveInk</title>
-  <!-- bootstrap cdn -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Waveink Content Writing Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <!-- Header will be inserted here -->
+    <div id="header-placeholder"></div>
 
-  <!-- Include header -->
-  <!--#include virtual="components/header.html" -->
-
-    <section class="contact-hero about pb-2">
-      <div class="container">
-        <h2 class="page-title mb-1">Lost in the wave? 🌊</h2>
-        <p class="portfolio-sub mb-0 font-xs">Send us a message — we respond faster than a seagull on fries.</p>
-      </div>
-    </section>
-
-    <section class="contact-form-section about pt-0">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <form class="contact-form d-flex justify-content-start" onsubmit="return showThankYou(event)">
-              <label class="form-label text-start mb-0" for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="e.g., Sherlock Holmes" required class="form-control" />
-      
-              <label class="form-label text-start mb-0" for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@detective.agency" required class="form-control" />
-      
-              <label class="form-label text-start mb-0" for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Spill the beans..." required class="form-control"></textarea>
-      
-              <button type="submit">Send It 🚀</button>
-            </form>
-            <p id="thank-you" class="thank-you hidden">Message sent via carrier pigeon 🐦</p>
-          </div>
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    <span class="hero-line fade-in-text">Get in Touch</span>
+                    <span class="hero-line highlight fade-in-text">Let's Create</span>
+                    <span class="hero-line fade-in-text">Something Amazing</span>
+                </h1>
+                <p class="fade-in-text delay-3">Ready to transform your content strategy? We're here to help you craft messages that resonate with your audience and drive results. Fill out the form below and let's start the conversation.</p>
+            </div>
         </div>
-    </div>
     </section>
 
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Connect With Us</h3>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Us</h4>
+                            <p>For inquiries and quotes</p>
+                            <a href="mailto:hello@waveink.in">hello@waveink.in</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 9AM - 6PM IST</p>
+                            <p>We typically respond within 24 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Based In</h4>
+                            <p>Mumbai, India</p>
+                            <p>Working globally with clients worldwide</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company" class="form-label">Company/Organization</label>
+                            <input type="text" id="company" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service" class="form-label">Service You're Interested In</label>
+                            <select id="service" class="form-control">
+                                <option value="">Select a service</option>
+                                <option value="editorial">Editorial Content</option>
+                                <option value="technical">Technical Documentation</option>
+                                <option value="business">Business Collateral</option>
+                                <option value="strategy">Content Strategy & Distribution</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer will be loaded here by load-components.js -->
-    
-    <script src="components/load-components.js"></script>
-    <!-- bootstrap cdn script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title faq-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How quickly can you deliver content?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our turnaround times vary based on project scope and complexity. For standard blog posts and shorter content pieces, we typically deliver within 3-5 business days. For more complex projects like technical documentation or comprehensive content strategies, we'll provide a custom timeline during our initial consultation.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What are your payment terms?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>For most projects, we require a 50% deposit upfront, with the remaining balance due upon project completion. For ongoing retainer relationships, we typically bill monthly. We accept payments via bank transfer and major credit cards.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Do you offer revisions on content?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! All our content packages include up to two rounds of revisions to ensure you're completely satisfied. Additional revision rounds can be arranged at an hourly rate if needed. We're committed to delivering content that meets your expectations.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do you handle content research?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our process begins with thorough research. We dive into your industry, competitors, and target audience to ensure our content is accurate, relevant, and valuable. While we conduct our own research, we also welcome any materials or insights you can provide to help us better understand your business and goals.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can you help with content distribution?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! Beyond content creation, we offer content distribution strategy services to help maximize your content's reach and impact. This includes recommendations for channels, posting schedules, and optimization techniques to ensure your content reaches its intended audience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer will be inserted here -->
+    <div id="footer-placeholder"></div>
+
+    <script src="common.js"></script>
+
+    <script>
+
+
+        // Hero section animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in-text');
+            
+            fadeElements.forEach((element, index) => {
+                // Set initial state
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                
+                // Calculate delay based on index (0, 1, 2...)
+                const delay = element.classList.contains('delay-3') ? 1000 : 
+                              element.classList.contains('delay-4') ? 1300 : 
+                              index * 300;
+                
+                // Animate after delay
+                setTimeout(() => {
+                    element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, delay);
+            });
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would typically handle the form submission with AJAX
+            // For now, we'll just show an alert
+            alert('Thank you for your message! We\'ll get back to you soon.');
+            contactForm.reset();
+        });
+    </script>
 </body>
 </html>
