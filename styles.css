@@ -320,6 +320,7 @@ footer {
 .footer-info {
     flex: 1;
     min-width: 250px;
+    color:var(--dark-color);
 }
 
 .footer-logo {
