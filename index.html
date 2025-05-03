@@ -1,77 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Waveink</title>
-    <!-- bootstrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waveink | Content Writing Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header will be inserted here -->
+    <div id="header-placeholder"></div>
 
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet"/>
-  </head>
-  <body>
-    <!-- Header will be loaded here by load-components.js -->
-    
-    <section class="about" id="about">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h2 class="page-title mb-4 pb-md-2">About Us</h2>
-            <p>
-              We are a team of passionate writers, dedicated to helping brands communicate with clarity, purpose, and impact. 
-              At Waveink, we deliver tailored writing solutions that align with your goals, engage your audience, and strengthen your 
-              brand voice.<br><br>
-              🧠 Strategic + 🎨 Creative + 💼 Professional = Waveink.<br>
-            </p>
-          </div>
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    <span class="hero-line fade-in-text">Content is chaotic. </span>
+                    <span class="hero-line highlight fade-in-text">Waveink</span>
+                    <span class="hero-line fade-in-text">Makes it Make Sense.</span>
+                </h1>
+                <p class="fade-in-text delay-3">At WaveInk, we write like HUMAN and not like AI. Guess what? We use the AI. You don't? Your fault. We provide content that aligns with your goals, engages your audience, and strengthens your brand voice. <br><br>🧠 Strategic + 🎨 Creative + 💼 Professional = Waveink.</p>
+                <a href="#contact" class="hero-btn fade-in-text delay-4">Let's Ride the Wave</a>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section class="services" id="services">
-      <div class="container">
-        <h2 class="page-title mb-4 pb-md-3">Our Services</h2>
-        <div class="tiles">
-          <div class="tile">Articles & Blogs<br><small>Creative and SEO-optimized content tailored for your audience.</small></div>
-          <div class="tile">Case Studies<br><small>Showcase your success stories with data-backed narratives.</small></div>
-          <div class="tile">Whitepapers<br><small>Insightful, well-researched content with visual appeal.</small></div>
-          <div class="tile">Documentation<br><small>Clear, concise, and user/developer-friendly documentation.</small></div>
-          <div class="tile">Pitch Decks<br><small>Investor-ready decks that combine story and stats.</small></div>
-          <div class="tile">Website Content<br><small>Words that make your brand unforgettable.</small></div>
-          <div class="tile">SEO<br><small>We help you climb the search engine ladder.</small></div>
-          <div class="tile">Social Media<br><small>Platform-specific strategies with results.</small></div>
-          <div class="tile">Content Strategy<br><small>Let's plan and deliver like never before.</small></div>
+    <section id="services" class="what-we-do-section">
+        <div class="container">
+            <h2 class="section-title">WHAT We DO? (And Do Damn Well)</h2>
+            <div class="services-grid">
+                <div class="service-column">
+                    <a href="editorial.html" class="service-link">
+                        <h3 class="service-title">EDITORIAL CONTENT</h3>
+                        <div class="underline"></div>
+                        <p class="service-description">We create blogs that engage, articles that inform, and web content that speaks your brand's language — all crafted to connect and convert.</p>
+                    </a>
+                </div>
+                <div class="service-column">
+                    <a href="documentation.html" class="service-link">
+                        <h3 class="service-title">TECHNICAL DOCUMENTATION</h3>
+                        <div class="underline"></div>
+                        <p class="service-description">Clear, concise technical content that explains complex concepts in accessible language for your users and stakeholders.</p>
+                    </a>
+                </div>
+                <div class="service-column">
+                    <a href="business.html" class="service-link">
+                        <h3 class="service-title">BUSINESS COLLATERAL</h3>
+                        <div class="underline"></div>
+                        <p class="service-description">Persuasive copy that converts visitors into customers and effectively communicates your brand's unique value proposition.</p>
+                    </a>
+                </div>
+                <div class="service-column">
+                    <a href="strategy.html" class="service-link">
+                        <h3 class="service-title">CONTENT STRATEGY & DISTRIBUTION</h3>
+                        <div class="underline"></div>
+                        <p class="service-description">Strategic content planning that aligns with your business goals and creates a roadmap for consistent, effective messaging.</p>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section class="portfolio" id="portfolio">
-      <div class="container">
-        <h2 class="page-title mb-4 pb-md-2">Our Portfolio</h2>
-        <div class="slider">
-          <div class="slide">🎯 Coming up soon...</div>
-          <div class="slide">📄 Coming up soon...</div>
-          <div class="slide">📈 Coming up soon...</div>
+    <section id="clients" class="who-we-do-for-section">
+        <div class="container">
+            <h2 class="section-title">WHO WE DO IT FOR?</h2>
+            <div class="clients-grid">
+                <div class="client-column">
+                    <h3 class="client-title">TECH COMPANIES</h3>
+                    <div class="underline"></div>
+                    <p class="client-description">From startups to established tech firms, we help you communicate complex solutions in clear, compelling language.</p>
+                </div>
+                <div class="client-column">
+                    <h3 class="client-title">SAAS SOLOPRENEURS AND INDIE HACKERS</h3>
+                    <div class="underline"></div>
+                    <p class="client-description">We help independent developers and creators craft messaging that resonates with their target audience and drives adoption.</p>
+                </div>
+                <div class="client-column">
+                    <h3 class="client-title">SMALL AGENCIES</h3>
+                    <div class="underline"></div>
+                    <p class="client-description">Partner with us to expand your service offerings and provide high-quality content to your clients without adding to your overhead.</p>
+                </div>
+                <div class="client-column">
+                    <h3 class="client-title">B2B & B2C</h3>
+                    <div class="underline"></div>
+                    <p class="client-description">Whether you're speaking to businesses or consumers, we adapt our writing style to effectively reach your specific audience.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section class="blog" id="blog">
-      <div class="container">
-        <h2 class="page-title mb-4 pb-md-2">From Our Blog</h2>
-        <div class="slider">
-          <div class="slide">📚 Coming up soon...</div>
-          <div class="slide">🧠 Coming up soon...</div>
-          <div class="slide">🔥 Coming up soon...</div>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">GET IN TOUCH.</h2>
+                <p>Ready to elevate your content? Let's start a conversation.</p>
+                <a href="mailto:hello@Waveink.in" class="contact-btn">Contact Us</a>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Footer will be loaded here by load-components.js -->
-    
-    <script src="components/load-components.js"></script>
-    <!-- bootstrap cdn script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+    <!-- Footer will be inserted here -->
+    <div id="footer-placeholder"></div>
+
+    <script src="common.js"></script>
+    <script>
+        // Hero section animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in-text');
+            
+            fadeElements.forEach((element, index) => {
+                // Set initial state
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                
+                // Calculate delay based on index (0, 1, 2...)
+                const delay = element.classList.contains('delay-3') ? 1000 : 
+                              element.classList.contains('delay-4') ? 1300 : 
+                              index * 300;
+                
+                // Animate after delay
+                setTimeout(() => {
+                    element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, delay);
+            });
+        });
+    </script>
+</body>
 </html>
