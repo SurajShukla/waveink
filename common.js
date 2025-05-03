@@ -19,6 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
             // Extract footer content
             const footerContent = data.split('<!-- Footer Section -->')[1];
             document.getElementById('footer-placeholder').innerHTML = footerContent;
+            
+            // After footer is loaded, modify logo color for footer
+            const footerLogo = document.querySelector('.footer-logo-svg');
+            if (footerLogo) {
+                // Change all SVG paths to black color in the footer logo
+                const svgPaths = footerLogo.querySelectorAll('path');
+                svgPaths.forEach(path => {
+                    path.setAttribute('fill', '#242424'); // Using your dark-color variable value
+                });
+            }
         })
         .catch(error => console.error('Error loading footer:', error));
 });
