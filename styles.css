@@ -328,7 +328,7 @@ footer {
 }
 
 footer .logo h1 {
-    color: var(--dark-color);
+      color:var(--dark-color);
 }
 
 .footer-logo img {
