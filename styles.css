@@ -327,6 +327,10 @@ footer {
     margin-bottom: 20px;
 }
 
+footer .logo h1 {
+    color: var(--dark-color);
+}
+
 .footer-logo img {
     height: 30px;
 }
