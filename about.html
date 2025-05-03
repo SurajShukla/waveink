@@ -1,166 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us - Waveink</title>
-  <!-- bootstrap cdn -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet"/>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Waveink</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header will be loaded here by load-components.js -->
+    <!-- Header will be inserted here -->
+    <div id="header-placeholder"></div>
 
-  <main>
-    <!-- WHO WE ARE -->
-    <section class="about-intro bg-light-orange">
-      <div class="container">
-        <h2 class="page-title mb-4 pb-md-2">Who We Are</h2>
-        <div class="about-cards">
-          <div class="about-card">
-            <i class="fas fa-bolt"></i>
-            <h3>Our Beginning</h3>
-            <p>Founded in December 2024, Waveink was built with a 
-              vision to empower businesses with high-quality content. </p>
-          </div>
-          <div class="about-card">
-            <i class="fas fa-users"></i>
-            <h3>Who We Serve</h3>
-            <p>From startups and indie hackers to large businesses and solopreneurs to CXOs, 
-              we offer tailored solutions for every content need. Whether it’s a blog, a case study, or SaaS documentation—we’ve 
-              got it covered.</p>
-          </div>
-          <div class="about-card">
-            <i class="fas fa-calendar-alt"></i>
-            <h3>Our Approach</h3>
-            <p>Get things done! Listen. Read. Research. Learn. Right. Impactful Delivery.</p>
-          </div>
+    <section class="page-hero">
+        <div class="container">
+            <h1>About Waveink</h1>
+            <p>We're content alchemists turning information chaos into clear, compelling narratives.</p>
         </div>
-      </div>
     </section>
 
-    <!-- CORE VALUES with slider -->
-    <section class="about-values bg-light-cream">
-      <h2 class="page-title mb-4 pb-md-2">Our Core Values</h2>
-      <div class="core-carousel">
-        <button class="carousel-arrow left" onclick="prevValues()">
-          <i class="fas fa-chevron-left"></i>
-        </button>
+    <section class="service-detail-section">
+        <div class="container">
+            <div class="service-intro">
+                <h2 class="section-title">OUR STORY</h2>
+                <p>Waveink was born from a simple observation: in a world overflowing with content, clarity is king. We're a team of writers, strategists, and creative minds passionate about transforming complex ideas into compelling narratives that connect with audiences and drive results.</p>
+            </div>
 
-        <div class="value-cards" id="core-values-container">
-          <!-- JS will inject value cards here -->
+            <div class="about-columns">
+                <div class="about-column">
+                    <h3>OUR MISSION</h3>
+                    <div class="underline"></div>
+                    <p>To empower businesses with content that cuts through the noise, connects with their audience, and converts interest into action. We believe that effective communication is the foundation of business success.</p>
+                </div>
+                
+                <div class="about-column">
+                    <h3>OUR VISION</h3>
+                    <div class="underline"></div>
+                    <p>To be the trusted content partner for forward-thinking businesses that understand the power of clear, strategic communication in driving growth and building lasting relationships with their audience.</p>
+                </div>
+                
+                <div class="about-column">
+                    <h3>OUR VALUES</h3>
+                    <div class="underline"></div>
+                    <ul class="values-list">
+                        <li><i class="fas fa-check-circle"></i> Clarity above all else</li>
+                        <li><i class="fas fa-check-circle"></i> Strategic thinking</li>
+                        <li><i class="fas fa-check-circle"></i> Creative excellence</li>
+                        <li><i class="fas fa-check-circle"></i> Client partnership</li>
+                        <li><i class="fas fa-check-circle"></i> Continuous improvement</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
-        <button class="carousel-arrow right" onclick="nextValues()">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
     </section>
 
-<section class="about-thinking bg-light-beige">
-  <div class="container">
-    <h2 class="page-title mb-4 pb-md-2">How We Think (and Sometimes Overthink)</h2>
-    <div class="tiles">
-<div class="tile about-hover">
-        <i class="fas fa-lightbulb"></i>
-        <h3>Stage 1: That’s Genius</h3>
-        <p>All ideas start wild—written on napkins, dreamt at 2am, or inspired by a poorly-timed pun.</p>
-      </div>
-<div class="tile about-hover">
-        <i class="fas fa-question-circle"></i>
-        <h3>Stage 2: Is It Though?</h3>
-        <p>This is the existential phase. We stare at walls, argue over fonts, and rethink everything. Twice.</p>
-      </div>
-<div class="tile about-hover">
-        <i class="fas fa-magic"></i>
-        <h3>Stage 3: It Just Might Work</h3>
-        <p>With just the right amount of chaos and coffee, the draft becomes a story. And the story? A vibe.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="testimonial">
+                <p class="testimonial-text">"Waveink transformed our messaging from confusing technical jargon to clear, compelling content that actually drives conversions. They took the time to truly understand our business and our goals."</p>
+                <p class="testimonial-author">Sarah Johnson</p>
+                <p class="testimonial-company">CEO, TechStart Solutions</p>
+            </div>
+        </div>
+    </section>
 
+    <section class="service-detail-section">
+        <div class="container">
+            <h2 class="section-title">OUR TEAM</h2>
+            <p class="team-intro">Meet the wordsmiths, strategists, and content experts who bring your messaging to life.</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-img-placeholder"></div>
+                    <div class="team-info">
+                        <h3>Alex Rodriguez</h3>
+                        <p class="team-title">Founder & Lead Strategist</p>
+                        <p class="team-bio">With over a decade of experience in content strategy and digital marketing, Alex founded Waveink to help businesses harness the power of clear, strategic communication.</p>
+                        <div class="team-social">
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-img-placeholder"></div>
+                    <div class="team-info">
+                        <h3>Maya Patel</h3>
+                        <p class="team-title">Senior Content Strategist</p>
+                        <p class="team-bio">Maya specializes in creating comprehensive content strategies that align with business goals and resonate with target audiences across multiple channels.</p>
+                        <div class="team-social">
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-img-placeholder"></div>
+                    <div class="team-info">
+                        <h3>David Chen</h3>
+                        <p class="team-title">Technical Content Specialist</p>
+                        <p class="team-bio">With a background in both engineering and writing, David excels at translating complex technical concepts into clear, accessible content for diverse audiences.</p>
+                        <div class="team-social">
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</section>
-    
-  </main>
+    <section class="service-detail-section" style="background-color: var(--secondary-color);">
+        <div class="container">
+            <h2 class="section-title">WHY CHOOSE US</h2>
+            <div class="why-us-grid">
+                <div class="why-us-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>Strategic Approach</h3>
+                    <p>We don't just write; we create content strategies aligned with your business goals and audience needs.</p>
+                </div>
+                
+                <div class="why-us-item">
+                    <i class="fas fa-user-friends"></i>
+                    <h3>Client Partnership</h3>
+                    <p>We work closely with you to understand your brand, goals, and challenges for truly aligned content.</p>
+                </div>
+                
+                <div class="why-us-item">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h3>Industry Expertise</h3>
+                    <p>Our team brings specialized knowledge across tech, SaaS, B2B, and more for relevant content.</p>
+                </div>
+                
+                <div class="why-us-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Results-Focused</h3>
+                    <p>We create content with clear objectives, measuring success through tangible business outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer will be loaded here by load-components.js -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">READY TO WORK WITH US?</h2>
+                <p>Let's start a conversation about your content needs.</p>
+                <a href="contact.html" class="contact-btn">Get in Touch</a>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    const allValues = [
-      {
-        icon: "fas fa-lightbulb",
-        title: "Creativity",
-        text: "We bring ideas that spark joy, connection, and action."
-      },
-      {
-        icon: "fas fa-hands-helping",
-        title: "Collaboration",
-        text: "We grow stronger together — with our team and our clients."
-      },
-      {
-        icon: "fas fa-bullseye",
-        title: "Clarity",
-        text: "No fluff. Just powerful, clear communication that works."
-      },
-      {
-        icon: "fas fa-brain",
-        title: "Strategy",
-        text: "We blend insight with imagination to tell smart stories."
-      },
-      {
-        icon: "fas fa-mug-hot",
-        title: "Culture",
-        text: "We vibe with memes, chai breaks, and shared laughter."
-      }
-    ];
+    <!-- Footer will be inserted here -->
+    <div id="footer-placeholder"></div>
 
-    let currentStart = 0;
-    const maxVisible = 3;
-
-    function renderValues() {
-      const container = document.getElementById('core-values-container');
-      container.innerHTML = '';
-
-      const slice = allValues.slice(currentStart, currentStart + maxVisible);
-      slice.forEach(val => {
-        const card = document.createElement('div');
-        card.className = 'value-card';
-        card.innerHTML = `
-          <i class="${val.icon}"></i>
-          <h3>${val.title}</h3>
-          <p>${val.text}</p>
-        `;
-        container.appendChild(card);
-      });
-
-      // Disable arrows if needed
-      document.querySelector('.carousel-arrow.left').disabled = currentStart === 0;
-      document.querySelector('.carousel-arrow.right').disabled = currentStart + maxVisible >= allValues.length;
-    }
-
-    function nextValues() {
-      if (currentStart + maxVisible < allValues.length) {
-        currentStart += 1;
-        renderValues();
-      }
-    }
-
-    function prevValues() {
-      if (currentStart > 0) {
-        currentStart -= 1;
-        renderValues();
-      }
-    }
-
-    renderValues();
-  </script>
-  <script src="components/load-components.js"></script>
-  <!-- bootstrap cdn script -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="common.js"></script>
 </body>
 </html>
