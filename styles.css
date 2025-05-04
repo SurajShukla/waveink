@@ -1289,19 +1289,20 @@ footer .social-icons {
 
 /* Logo Image Styles */
 .logo-img {
-    max-width: 180px;
+    max-width: 120px;
     height: auto;
     display: block;
 }
 
 .footer-logo-img {
-    max-width: 150px;
+    max-width: 120px;
+    margin-bottom: 20px;
 }
 
 /* Media Queries for Logo Responsiveness */
 @media (max-width: 768px) {
     .logo-img {
-        max-width: 150px;
+        max-width: 110px;
     }
     
     .footer-logo-img {
