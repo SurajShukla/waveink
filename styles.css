@@ -857,7 +857,7 @@ footer .social-icons {
 /* Dropdown Menu Styles */
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: flex;
 }
 
 .dropdown-trigger {
