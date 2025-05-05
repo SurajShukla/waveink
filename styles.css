@@ -1287,41 +1287,8 @@ footer .social-icons {
             }
         }
 
-/* Logo Image Styles */
-.logo-img {
-    max-width: 120px;
-    height: auto;
-    display: block;
-}
-
-.footer-logo-img {
-    max-width: 120px;
-    margin-bottom: 20px;
-}
-
-/* Media Queries for Logo Responsiveness */
-@media (max-width: 768px) {
-    .logo-img {
-        max-width: 110px;
-    }
-    
-    .footer-logo-img {
-        max-width: 130px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-img {
-        max-width: 130px;
-    }
-    
-    .footer-logo-img {
-        max-width: 110px;
-    }
-}
-
-
 <!-- CSS to be added to styles.css -->
+/* Updated Logo Underline Styling for Better Mobile Responsiveness */
 /* Updated Logo Underline Styling for Better Mobile Responsiveness */
 
 /* General logo styling */
@@ -1356,25 +1323,25 @@ footer .text-logo {
 
 footer .logo-text {
     color: var(--dark-color);
-    font-size: 1.4rem;
-    font-weight: 800;
+    font-size: 1.4rem; /* Match header size for consistency */
+    font-weight: 800; /* Match header weight */
+    letter-spacing: 1px; /* Match header letter spacing */
 }
 
 footer .logo-underline {
     background-color: var(--primary-color);
     width: 100%; /* Make underline match text width exactly */
+    height: 3px; /* Match header underline height */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .logo-text {
-         font-size: 1.4rem;
-    font-weight: 800;
+        font-size: 1.3rem;
     }
     
     footer .logo-text {
-         font-size: 1.4rem;
-    font-weight: 800;
+        font-size: 1.3rem; /* Keep consistent with header at this breakpoint */
     }
     
     footer .text-logo {
@@ -1384,10 +1351,10 @@ footer .logo-underline {
 
 @media (max-width: 480px) {
     .logo-text {
- font-size: 1.4rem;
-    font-weight: 800;    }
+        font-size: 1.2rem;
+    }
     
     footer .logo-text {
- font-size: 1.4rem;
-    font-weight: 800;    }
+        font-size: 1.2rem; /* Keep consistent with header at this breakpoint */
+    }
 }
