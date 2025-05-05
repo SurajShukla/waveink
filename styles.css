@@ -1358,3 +1358,125 @@ footer .logo-underline {
         font-size: 1.2rem; /* Keep consistent with header at this breakpoint */
     }
 }
+/* Additional About Page Animation Styles */
+
+/* Page Hero Animation Enhancements */
+.page-hero {
+    background-color: var(--primary-color);
+    padding: 200px 0 80px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.page-hero h1 {
+    font-weight: 800;
+    line-height: 1.2;
+    font-size: 4rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.page-hero .hero-line {
+    display: block;
+}
+
+.page-hero .hero-line.highlight {
+    color: var(--accent-color);
+}
+
+.page-hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    opacity: 0.9;
+}
+
+/* Fade-in animation for About page sections */
+.fade-in-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--animation-duration) ease, transform var(--animation-duration) ease;
+}
+
+/* Service Intro Animation */
+.service-intro {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+/* About Columns Animation */
+.about-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Testimonial Section Animation */
+.testimonial-section .testimonial {
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Why Choose Us Animation */
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.why-us-item {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.why-us-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation Delays */
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.4s;
+}
+
+.delay-4 {
+    transition-delay: 0.6s;
+}
+
+.delay-5 {
+    transition-delay: 0.8s;
+}
+
+/* Responsive adjustments for animations */
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .about-columns {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .fade-in-text {
+        transform: translateY(15px); /* Smaller transform distance on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .page-hero p {
+        font-size: 1.1rem;
+    }
+}
