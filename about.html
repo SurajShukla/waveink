@@ -16,10 +16,7 @@
 
     <section class="page-hero">
         <div class="container">
-            <h1>
-                <span class="hero-line fade-in-text">About</span>
-                <span class="hero-line highlight fade-in-text">Waveink</span>
-            </h1>
+            <h1 class="fade-in-text">About <span class="highlight">Waveink</span></h1>
             <p class="fade-in-text delay-3">We're content alchemists turning information chaos into clear, compelling narratives.</p>
         </div>
     </section>
@@ -27,24 +24,24 @@
     <section class="service-detail-section">
         <div class="container">
             <div class="service-intro">
-                <h2 class="section-title fade-in-text">OUR STORY</h2>
-                <p class="fade-in-text delay-2">Waveink was born from a simple observation: in a world overflowing with content, clarity is king. We're a team of writers, strategists, and creative minds passionate about transforming complex ideas into compelling narratives that connect with audiences and drive results.</p>
+                <h2 class="section-title">OUR STORY</h2>
+                <p>Waveink was born from a simple observation: in a world overflowing with content, clarity is king. We're a team of writers, strategists, and creative minds passionate about transforming complex ideas into compelling narratives that connect with audiences and drive results.</p>
             </div>
 
             <div class="about-columns">
-                <div class="about-column fade-in-text delay-3">
+                <div class="about-column">
                     <h3>OUR MISSION</h3>
                     <div class="underline"></div>
                     <p>To empower businesses with content that cuts through the noise, connects with their audience, and converts interest into action. We believe that effective communication is the foundation of business success.</p>
                 </div>
                 
-                <div class="about-column fade-in-text delay-4">
+                <div class="about-column">
                     <h3>OUR VISION</h3>
                     <div class="underline"></div>
                     <p>To be the trusted content partner for forward-thinking businesses that understand the power of clear, strategic communication in driving growth and building lasting relationships with their audience.</p>
                 </div>
                 
-                <div class="about-column fade-in-text delay-5">
+                <div class="about-column">
                     <h3>OUR VALUES</h3>
                     <div class="underline"></div>
                     <ul class="values-list">
@@ -61,7 +58,7 @@
 
     <section class="testimonial-section">
         <div class="container">
-            <div class="testimonial fade-in-text">
+            <div class="testimonial">
                 <p class="testimonial-text">"Waveink transformed our messaging from confusing technical jargon to clear, compelling content that actually drives conversions. They took the time to truly understand our business and our goals."</p>
                 <p class="testimonial-author">Sarah Johnson</p>
                 <p class="testimonial-company">CEO, TechStart Solutions</p>
@@ -71,27 +68,27 @@
 
     <section class="service-detail-section" style="background-color: var(--secondary-color);">
         <div class="container">
-            <h2 class="section-title fade-in-text">WHY CHOOSE US</h2>
+            <h2 class="section-title">WHY CHOOSE US</h2>
             <div class="why-us-grid">
-                <div class="why-us-item fade-in-text delay-2">
+                <div class="why-us-item">
                     <i class="fas fa-brain"></i>
                     <h3>Strategic Approach</h3>
                     <p>We don't just write; we create content strategies aligned with your business goals and audience needs.</p>
                 </div>
                 
-                <div class="why-us-item fade-in-text delay-3">
+                <div class="why-us-item">
                     <i class="fas fa-user-friends"></i>
                     <h3>Client Partnership</h3>
                     <p>We work closely with you to understand your brand, goals, and challenges for truly aligned content.</p>
                 </div>
                 
-                <div class="why-us-item fade-in-text delay-4">
+                <div class="why-us-item">
                     <i class="fas fa-puzzle-piece"></i>
                     <h3>Industry Expertise</h3>
                     <p>Our team brings specialized knowledge across tech, SaaS, B2B, and more for relevant content.</p>
                 </div>
                 
-                <div class="why-us-item fade-in-text delay-5">
+                <div class="why-us-item">
                     <i class="fas fa-chart-line"></i>
                     <h3>Results-Focused</h3>
                     <p>We create content with clear objectives, measuring success through tangible business outcomes.</p>
@@ -102,7 +99,7 @@
 
     <section id="contact" class="contact-section">
         <div class="container">
-            <div class="contact-content fade-in-text">
+            <div class="contact-content">
                 <h2 class="section-title">READY TO WORK WITH US?</h2>
                 <p>Let's start a conversation about your content needs.</p>
                 <a href="contact.html" class="contact-btn">Get in Touch</a>
@@ -115,46 +112,26 @@
 
     <script src="common.js"></script>
     <script>
-        // About page animations
+        // Hero section animation
         document.addEventListener('DOMContentLoaded', function() {
             const fadeElements = document.querySelectorAll('.fade-in-text');
             
-            // Set initial state for all elements
-            fadeElements.forEach(element => {
+            fadeElements.forEach((element, index) => {
+                // Set initial state
                 element.style.opacity = '0';
                 element.style.transform = 'translateY(20px)';
-            });
-            
-            // Use Intersection Observer to trigger animation when elements are in view
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const element = entry.target;
-                        
-                        // Calculate delay based on classes
-                        const delay = element.classList.contains('delay-2') ? 300 : 
-                                      element.classList.contains('delay-3') ? 600 :
-                                      element.classList.contains('delay-4') ? 900 :
-                                      element.classList.contains('delay-5') ? 1200 : 0;
-                        
-                        // Animate after delay
-                        setTimeout(() => {
-                            element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                            element.style.opacity = '1';
-                            element.style.transform = 'translateY(0)';
-                        }, delay);
-                        
-                        // Stop observing once animation is triggered
-                        observer.unobserve(element);
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-            
-            // Start observing each fade element
-            fadeElements.forEach(element => {
-                observer.observe(element);
+                
+                // Calculate delay based on index (0, 1, 2...)
+                const delay = element.classList.contains('delay-3') ? 1000 : 
+                              element.classList.contains('delay-4') ? 1300 : 
+                              index * 300;
+                
+                // Animate after delay
+                setTimeout(() => {
+                    element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, delay);
             });
         });
     </script>
