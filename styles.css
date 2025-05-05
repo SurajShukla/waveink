@@ -1356,7 +1356,8 @@ footer .text-logo {
 
 footer .logo-text {
     color: var(--dark-color);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 800;
 }
 
 footer .logo-underline {
@@ -1367,11 +1368,13 @@ footer .logo-underline {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .logo-text {
-        font-size: 1.3rem;
+         font-size: 1.4rem;
+    font-weight: 800;
     }
     
     footer .logo-text {
-        font-size: 1.1rem;
+         font-size: 1.4rem;
+    font-weight: 800;
     }
     
     footer .text-logo {
@@ -1381,10 +1384,10 @@ footer .logo-underline {
 
 @media (max-width: 480px) {
     .logo-text {
-        font-size: 1.2rem;
-    }
+ font-size: 1.4rem;
+    font-weight: 800;    }
     
     footer .logo-text {
-        font-size: 1rem;
-    }
+ font-size: 1.4rem;
+    font-weight: 800;    }
 }
