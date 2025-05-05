@@ -1322,6 +1322,9 @@ footer .social-icons {
 
 
 <!-- CSS to be added to styles.css -->
+/* Updated Logo Underline Styling for Better Mobile Responsiveness */
+
+/* General logo styling */
 .text-logo {
     display: flex;
     flex-direction: column;
@@ -1330,7 +1333,7 @@ footer .social-icons {
 
 .logo-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.4rem; /* Adjusted to match menu size but slightly bigger */
+    font-size: 1.4rem;
     font-weight: 800;
     letter-spacing: 1px;
     color: var(--text-color);
@@ -1338,25 +1341,27 @@ footer .social-icons {
 }
 
 .logo-underline {
-    width: 100%;
+    width: 100%; /* Full width relative to the container */
     height: 3px;
     background-color: var(--accent-color);
     margin-top: 3px;
 }
 
-/* For the footer logo - black text on white background */
+/* Footer specific logo styling */
 footer .text-logo {
     margin-bottom: 15px;
+    display: inline-block; /* This makes the container only as wide as needed */
+    width: auto;
 }
 
 footer .logo-text {
-    color: var(--dark-color); /* Black text color for footer */
-    font-size: 1.2rem; /* Smaller size for footer */
+    color: var(--dark-color);
+    font-size: 1.2rem;
 }
 
 footer .logo-underline {
     background-color: var(--primary-color);
-    width: 80%; /* Slightly shorter underline for footer */
+    width: 100%; /* Make underline match text width exactly */
 }
 
 /* Responsive adjustments */
@@ -1367,6 +1372,10 @@ footer .logo-underline {
     
     footer .logo-text {
         font-size: 1.1rem;
+    }
+    
+    footer .text-logo {
+        width: auto; /* Ensure container is only as wide as content */
     }
 }
 
