@@ -1330,7 +1330,7 @@ footer .social-icons {
 
 .logo-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.4rem; /* Adjusted to match menu size but slightly bigger */
     font-weight: 800;
     letter-spacing: 1px;
     color: var(--text-color);
@@ -1344,24 +1344,38 @@ footer .social-icons {
     margin-top: 3px;
 }
 
-/* For the footer logo */
+/* For the footer logo - black text on white background */
+footer .text-logo {
+    margin-bottom: 15px;
+}
+
 footer .logo-text {
-    color: var(--dark-color);
+    color: var(--dark-color); /* Black text color for footer */
+    font-size: 1.2rem; /* Smaller size for footer */
 }
 
 footer .logo-underline {
     background-color: var(--primary-color);
+    width: 80%; /* Slightly shorter underline for footer */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .logo-text {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
+    }
+    
+    footer .logo-text {
+        font-size: 1.1rem;
     }
 }
 
 @media (max-width: 480px) {
     .logo-text {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+    
+    footer .logo-text {
+        font-size: 1rem;
     }
 }
