@@ -80,7 +80,7 @@ css.logo {
   height: 40px; /* Adjust this value based on your desired logo height */
   width: auto;
   vertical-align: middle;
-  padding: 10px 0; /* Adjust padding to create proper spacing */
+  padding: 0px 0; /* Adjust padding to create proper spacing */
 }
 
 .nav-links {
@@ -332,6 +332,7 @@ footer .logo h1 {
 .footer-contact, .footer-email {
     font-size: 0.9rem;
     margin-bottom: 5px;
+    margin-top: 15px;
 }
 
 .footer-copyright {
