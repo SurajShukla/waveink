@@ -66,32 +66,21 @@ nav {
     padding-bottom: 20px;
 }
 
-.logo {
-    display: flex;
-    flex-direction: column;
+css.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
-/* Logo SVG Styles */
-.logo-svg {
-    width: 180px;
-    height: auto;
+.logo a {
+  display: block;
 }
 
-.footer-logo-svg {
-    width: 150px;
-}
-
-.logo h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.logo-underline {
-    width: 80%;
-    height: 3px;
-    background-color: var(--accent-color);
-    margin-top: 5px;
+.logo-image {
+  height: 40px; /* Adjust this value based on your desired logo height */
+  width: auto;
+  vertical-align: middle;
+  padding: 10px 0; /* Adjust padding to create proper spacing */
 }
 
 .nav-links {
