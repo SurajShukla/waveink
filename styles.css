@@ -575,7 +575,8 @@ footer .logo-underline {
 .footer-email {
     margin-bottom: 15px;
     font-size: 1rem;
-    color: var(--primary-dark);
+    // color: var(--primary-dark);
+    color: #f2f2f2;
 }
 
 /* Footer specific style adjustments */
