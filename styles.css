@@ -294,7 +294,7 @@ css.logo {
 
 /* Footer */
 footer {
-    background-color: var(--light-color);
+    background-color: rgba(25, 25, 25, 0.9);
     padding: 60px 0 30px;
     color: var(--dark-color);
 }
@@ -358,11 +358,11 @@ footer .logo h1 {
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 20px;
-    color: var(--dark-color);
+    color: #fff;
 }
 
 .footer-column a {
-    color: var(--primary-dark);
+    // color: var(--primary-dark);
     margin-bottom: 10px;
     font-size: 0.9rem;
     transition: var(--transition);
