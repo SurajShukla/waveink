@@ -1133,7 +1133,7 @@ footer .logo-underline {
     background-color: var(--accent-color);
     color: var(--primary-dark);
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* Specific icon colors on hover (optional) */
@@ -4324,5 +4324,41 @@ footer, .footer-content, .footer-info, .footer-logo, .footer-links, .footer-colu
         margin-top: 10px;
         justify-content: flex-start;
     }
+}
+
+@media (max-width: 768px) {
+  .wave-footer {
+    text-align: center;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .wave-footer .wave-footer-logo,
+  .wave-footer .wave-footer-contact,
+  .wave-footer .wave-footer-socials,
+  .wave-footer .wave-footer-links,
+  .wave-footer .wave-footer-cta {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wave-footer .wave-footer-socials {
+    justify-content: center;
+    gap: 18px;
+  }
+  .wave-footer .wave-footer-links {
+    gap: 0;
+  }
+  .wave-footer .wave-footer-cta {
+    width: 100%;
+    max-width: 100%;
+  }
+  .wave-footer .wave-footer-cta-btn {
+    width: 100%;
+    max-width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
