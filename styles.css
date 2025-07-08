@@ -4465,3 +4465,237 @@ footer .social-icons {
     }
 }
 
+/* Careers Page Unique Styles */
+.careers-hero {
+    text-align: center;
+    padding: 60px 0 30px 0;
+}
+.careers-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+.careers-hero p {
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.92;
+}
+.careers-link {
+    color: var(--accent-color);
+    text-decoration: underline;
+    word-break: break-all;
+}
+.careers-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+.careers-intro h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.careers-intro p {
+    font-size: 1.1rem;
+    opacity: 0.92;
+}
+.careers-why {
+    background: rgba(0,229,255,0.06);
+    padding: 32px 0;
+}
+.careers-why-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+    text-align: center;
+}
+.careers-why-item i {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+.careers-why-item h3 {
+    margin: 12px 0 8px 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+.careers-why-item p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+.careers-roles {
+    text-align: center;
+    max-width: 700px;
+    margin: 40px auto 0 auto;
+}
+.careers-roles h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.careers-roles p {
+    font-size: 1.1rem;
+    opacity: 0.92;
+}
+@media (max-width: 700px) {
+    .careers-hero h1 {
+        font-size: 1.5rem;
+    }
+    .careers-intro h2, .careers-roles h2 {
+        font-size: 1.2rem;
+    }
+    .careers-why-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
+/* Team Page Unique Styles */
+.team-hero {
+    text-align: center;
+    padding: 60px 0 30px 0;
+}
+.team-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+.team-hero p {
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.92;
+}
+.team-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+.team-intro h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.team-intro p {
+    font-size: 1.1rem;
+    opacity: 0.92;
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+.team-member {
+    background: #23272f;
+    border-radius: 12px;
+    padding: 32px 18px;
+    text-align: center;
+}
+.team-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    object-fit: cover;
+}
+.team-member h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+.team-role {
+    margin: 0 0 4px 0;
+    font-weight: 600;
+    color: var(--accent-color);
+    font-size: 1rem;
+}
+.team-cta {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+.team-cta h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.team-cta p {
+    font-size: 1.1rem;
+    opacity: 0.92;
+}
+.team-link {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+@media (max-width: 700px) {
+    .team-hero h1 {
+        font-size: 1.5rem;
+    }
+    .team-intro h2, .team-cta h2 {
+        font-size: 1.2rem;
+    }
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
+/* Team Page Hero and Section Backgrounds */
+.team-hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--text-color);
+    padding: 70px 0 40px 0;
+    text-align: center;
+}
+.team-hero-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.team-hero-section h1 {
+    font-size: 2.7rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+.team-hero-section p {
+    font-size: 1.2rem;
+    opacity: 0.93;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.team-section-bg1 {
+    background: #23272f;
+    color: var(--text-color);
+}
+.team-section-bg2 {
+    background: rgba(0,229,255,0.06);
+    color: var(--text-color);
+}
+.team-section-bg3 {
+    background: #1a1a1a;
+    color: var(--text-color);
+}
+.team-section-bg-hero { background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%); }
+.careers-section-bg-hero { background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%); }
+.team-section-bg1, .careers-section-bg1 { background: #23272f; }
+.team-section-bg2, .careers-section-bg2 { background: rgba(0,229,255,0.06); }
+.team-section-bg3, .careers-section-bg3 { background: #1a1a1a; }
+
+.team-grid-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+@media (max-width: 900px) {
+  .team-grid-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
