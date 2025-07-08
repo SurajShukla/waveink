@@ -116,29 +116,29 @@
             <div class="contact-testimonials-grid">
                 <div class="contact-testimonial-card">
                     <div class="contact-testimonial-content">
-                        <p>"Waveink's team was responsive and truly understood our needs. The process was seamless and the results exceeded expectations!"</p>
+                        <p>"Waveink delivered a high-quality how-to video and script for our product. The process was smooth, communication was thorough, and the final result needed no changes. Highly recommend!"</p>
                     </div>
                     <div class="contact-testimonial-author">
                         <div class="contact-author-info">
-                            <h4>Priya Desai</h4>
-                            <p>Head of Content, FinTechCo</p>
+                            <h4>Jacob Ferrero</h4>
+                            <p>Founder, Hitown</p>
                         </div>
-                        <div class="contact-testimonial-results">
-                            <span>Seamless process</span>
+                        <div class="contact-testimonial-logo">
+                            <img src="Hitown.jpeg" alt="Hitown Logo" style="height:32px;width:auto;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);background:#fff;">
                         </div>
                     </div>
                 </div>
                 <div class="contact-testimonial-card">
                     <div class="contact-testimonial-content">
-                        <p>"The communication was top-notch and the content delivered real business value. Highly recommend!"</p>
+                        <p>"Waveink provided excellent blogs for us. The quality and consistency exceeded our expectations. Highly recommended!"</p>
                     </div>
                     <div class="contact-testimonial-author">
                         <div class="contact-author-info">
-                            <h4>Rahul Verma</h4>
-                            <p>Marketing Lead, SaaS Startup</p>
+                            <h4>Mansoor</h4>
+                            <p>Desi Founder</p>
                         </div>
-                        <div class="contact-testimonial-results">
-                            <span>Real business value</span>
+                        <div class="contact-testimonial-logo">
+                            <img src="desi-founder-logo.png" alt="Desi Founder Logo" style="height:32px;width:auto;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);background:#fff;">
                         </div>
                     </div>
                 </div>
@@ -217,26 +217,29 @@
                     element.style.transform = 'translateY(0)';
                 }, delay);
             });
-        });
-        // FAQ Accordion
-        const faqItems = document.querySelectorAll('.contact-faq-item');
-        faqItems.forEach(item => {
-            const question = item.querySelector('.contact-faq-question');
-            question.addEventListener('click', () => {
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item && otherItem.classList.contains('active')) {
-                        otherItem.classList.remove('active');
+
+            // FAQ Accordion (only one open at a time)
+            const faqItems = document.querySelectorAll('.contact-faq-item');
+            faqItems.forEach((item, idx) => {
+                const question = item.querySelector('.contact-faq-question');
+                question.addEventListener('click', () => {
+                    console.log('Clicked FAQ', idx, item, item.classList.contains('active'));
+                    if (item.classList.contains('active')) {
+                        item.classList.remove('active');
+                    } else {
+                        faqItems.forEach(otherItem => otherItem.classList.remove('active'));
+                        item.classList.add('active');
                     }
                 });
-                item.classList.toggle('active');
             });
-        });
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We\'ll get back to you soon.');
-            contactForm.reset();
+
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We\'ll get back to you soon.');
+                contactForm.reset();
+            });
         });
     </script>
 </body>

@@ -1780,56 +1780,23 @@ footer .social-icons {
     transform: translateY(-5px);
             border-color: var(--accent-color);
 }
-.about-whyus-item i {
-    font-size: 2rem;
-    color: var(--accent-color);
-    margin-bottom: 18px;
+.about-whyus-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: var(--transition);
 }
 
-.about-cta-section {
-    padding: 40px 0 80px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-    text-align: center;
+.about-whyus-item:hover:before {
+    opacity: 1;
 }
-.about-cta-content h2 {
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-.about-cta-content p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.about-cta-btn {
-    display: inline-block;
-    padding: 15px 40px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 4px;
-            background-color: var(--accent-color);
-            color: var(--primary-dark);
-            transition: var(--transition);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-.about-cta-btn.primary:hover {
-            background-color: var(--text-color);
-    color: var(--primary-color);
-            transform: translateY(-3px);
-        }
-        
-.about-whychoose-section {
-    padding: 40px 0 80px;
-            background-color: var(--secondary-color);
-        }
-        
-@media (max-width: 1200px) {
+
+@media (max-width: 992px) {
     .about-columns {
         grid-template-columns: 1fr 1fr;
     }
@@ -3756,12 +3723,18 @@ footer .social-icons {
     margin-top: 40px;
 }
 .contact-faq-item {
-    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,0.12);
     border-radius: 12px;
     margin-bottom: 0;
-    transition: var(--transition);
+    transition: box-shadow 0.2s, background 0.2s, border 0.2s;
     overflow: hidden;
+}
+.contact-faq-item.active {
+    background: rgba(0,229,255,0.08);
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 2px 16px rgba(0,229,255,0.08);
+    z-index: 1;
 }
 .contact-faq-question {
     padding: 22px 30px;
