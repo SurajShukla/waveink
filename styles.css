@@ -4709,3 +4709,68 @@ footer .social-icons {
   margin: 0;
 }
 
+.service-offerings-section {
+  padding: 60px 0 80px 0;
+  background: var(--dark-color);
+}
+.service-offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  margin-top: 48px;
+}
+@media (max-width: 1000px) {
+  .service-offerings-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+}
+@media (max-width: 700px) {
+  .service-offerings-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.service-offering-card {
+  background: #23272f;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 38px 28px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1.5px solid rgba(0,229,255,0.08);
+}
+.service-offering-card:hover {
+  box-shadow: 0 8px 32px rgba(0,229,255,0.10);
+  border-color: var(--accent-color);
+  transform: translateY(-4px) scale(1.02);
+}
+.service-offering-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--accent-color);
+}
+.service-offering-card ul {
+  margin: 0 0 18px 0;
+  padding-left: 18px;
+  color: var(--text-color);
+  font-size: 1rem;
+  opacity: 0.92;
+}
+.service-offering-promise {
+  font-size: 0.98rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.service-offering-price {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  margin-top: auto;
+  letter-spacing: 1px;
+}
+
