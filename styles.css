@@ -4219,34 +4219,62 @@ footer .social-icons {
 .wave-footer-cta-col {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    min-width: 180px;
+    align-items: center;
+    justify-content: center;
+    padding: 36px 0 36px 0;
+    background: none;
+    border-radius: 14px;
+    min-width: 220px;
+    min-height: 200px;
+    box-sizing: border-box;
 }
 .wave-footer-cta-col h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 16px;
     color: var(--accent-color);
-    text-align: right;
+    font-size: 1.15rem;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+    text-align: center;
 }
 .wave-footer-cta {
     display: inline-block;
-    padding: 12px 22px;
-    background: var(--accent-color);
-    color: var(--primary-dark) !important;
-    font-weight: 700;
-    font-size: 1rem;
+    padding: 18px 38px;
+    background: #4ee6fa;
+    color: #2186d4 !important;
+    font-weight: 800;
+    font-size: 1.1rem;
     text-align: center;
-    border-radius: 4px;
-    margin-top: 10px;
-    transition: background 0.2s, color 0.2s, transform 0.2s;
+    border-radius: 32px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 24px rgba(78,230,250,0.10);
+    transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
 }
 .wave-footer-cta:hover {
-    background: var(--text-color);
-    color: var(--primary-color) !important;
-    transform: translateY(-2px);
+    background: #fff;
+    color: #2186d4 !important;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(78,230,250,0.18);
     text-decoration: none !important;
+}
+@media (max-width: 900px) {
+  .wave-footer-cta-col {
+    min-width: 0;
+    min-height: 160px;
+    padding: 28px 0 28px 0;
+  }
+  .wave-footer-cta-col h3 {
+    font-size: 1rem;
+    margin-bottom: 18px;
+  }
+  .wave-footer-cta {
+    padding: 15px 18px;
+    font-size: 1rem;
+    border-radius: 24px;
+  }
 }
 .wave-footer-copyright {
     font-size: 0.9rem;
