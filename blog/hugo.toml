@@ -1,0 +1,3 @@
+baseURL = "https://waveink.com/blog"
+relativeURLs = true
+canonifyURLs = true
